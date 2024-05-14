@@ -1,0 +1,10 @@
+.env
+/node_modules
+/.next
+/.vercel
+/.pnpm-store
+/prisma
+.vscode
+*.log
+.DS_Store
+
