@@ -115,3 +115,4 @@ For more information on developing Shopify apps with Remix, Ruby on Rails, and S
 If you encounter any issues or have any questions, feel free to reach out to us.
 
 Happy coding with Sigmas!
+# shopify-sigma-app
