@@ -1,8 +1,6 @@
-{{ 'btn.liquid.css' |  asset_url |  stylesheet_tag }}
 {%  style  %} 
 .cod-btn button{
     background-color: {{ block.settings.btn_bg }};
-    color:{{ block.settings.btn_text_color }};
     padding:{{ block.settings.btn_height }}px {{ block.settings.btn_width }}px;
     border:{{ block.settings.btn_border }}px solid {{ block.settings.btn_border_color }};
     border-radius:{{ block.settings.btn_radius }}px;
@@ -11,27 +9,43 @@
         font-weight:600;
         {% endif %}
 }
+.cod-btn button .btn_text_content{
+  color:{{ block.settings.btn_text_color }};
+  text-decoration: none;
+}
+{% if block.settings.btn_text_subtitle != blank %}
 .cod-btn button p{
     margin:0;
     margin-top: {{ block.settings.btn_text_subtitle_space }}px;
     font-size: {{ block.settings.btn_text_subtitle_size }}px;
+    color:{{ block.settings.btn_text_color }};
 }
+{% endif %}
  {% endstyle %} 
+ {%  assign icon_options  = block.settings.btn_icons %}
 <div class="cod-btn-main">
     <div class="cod-btn">
-        <button> {{ block.settings.btn_text }} 
-            {% if block.settings.btn_text_subtitle != blank %}
-            <p> {{ block.settings.btn_text_subtitle }} </p>
+<button data-product-id="{{ product.id }}"> 
+        <div class="btn_text_content">  
+        {{ block.settings.btn_text }} 
+        {% if block.settings.btn_text_subtitle != blank %}
+          <p> {{ block.settings.btn_text_subtitle }} </p>
+          {% endif %}
+        </div>
+            {% if block.settings.btn_icons != blank %}
+            <div> {%  render 'btn-svg', option: icon_options %}  </div>
             {% endif %}
         </button>
     </div>
 </div>
-
-
+<div class="form-modal">
+  {% render 'cod-form' %}
+</div>
 {% schema %}
 {
     "name": "COD Button",
     "target":"section",
+    "javascript":"cod-form.js",
     "settings": [
         {
             "type": "text",
@@ -41,24 +55,36 @@
         },
         {
   "type": "select",
-  "id": "btn_svg_icon",
+  "id": "btn_icons",
   "label": "Button Icon",
   "options": [
     {
-      "value": "cross",
-      "label": "Cross"
+      "value": "cart",
+      "label": "Cart"
     },
     {
-      "value": "middle",
-      "label": "Middle"
+      "value": "s",
+      "label": "Small"
     },
     {
-      "value": "bottom",
-      "label": "Bottom"
+      "value": "m",
+      "label": "Medium"
+    },
+    {
+      "value": "l",
+      "label": "Large"
+    },
+    {
+      "value": "xl",
+      "label": "X-large"
+    },
+    {
+      "value": "xxl",
+      "label": "XX-large"
     }
   ],
-  "default": "middle"
-}
+  "default": "m"
+},
 
         {
             "type": "text",
