@@ -1,4 +1,4 @@
-{%  style  %} 
+  {%  style  %} 
 .cod-btn button{
     background-color: {{ block.settings.btn_bg }};
     padding:{{ block.settings.btn_height }}px {{ block.settings.btn_width }}px;
@@ -20,7 +20,9 @@
     font-size: {{ block.settings.btn_text_subtitle_size }}px;
     color:{{ block.settings.btn_text_color }};
 }
+
 {% endif %}
+
  {% endstyle %} 
  {%  assign icon_options  = block.settings.btn_icons %}
 <div class="cod-btn-main">
@@ -46,6 +48,7 @@
     "name": "COD Button",
     "target":"section",
     "javascript":"cod-form.js",
+    "stylesheet":"cod-main.css",
     "settings": [
         {
             "type": "text",

@@ -1,0 +1,19 @@
+.delievery_and_cross h4 {
+    margin: 0;
+}
+.form-modal .cod-form-layer-main {
+    display: none;
+}
+.new-div{
+    display: none !important; 
+}
+.product_details .image_title img {
+    width: 100%;
+    max-width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+.image_title {
+    display: flex;
+    align-items: center;
+}
