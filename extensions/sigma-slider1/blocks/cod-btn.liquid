@@ -1,0 +1,166 @@
+{{ 'btn.liquid.css' |  asset_url |  stylesheet_tag }}
+{%  style  %} 
+.cod-btn button{
+    background-color: {{ block.settings.btn_bg }};
+    color:{{ block.settings.btn_text_color }};
+    padding:{{ block.settings.btn_height }}px {{ block.settings.btn_width }}px;
+    border:{{ block.settings.btn_border }}px solid {{ block.settings.btn_border_color }};
+    border-radius:{{ block.settings.btn_radius }}px;
+    font-size:{{ block.settings.btn_text_size }}px;
+    {% if block.settings.btn_text_bold == true %}
+        font-weight:600;
+        {% endif %}
+}
+.cod-btn button p{
+    margin:0;
+    margin-top: {{ block.settings.btn_text_subtitle_space }}px;
+    font-size: {{ block.settings.btn_text_subtitle_size }}px;
+}
+ {% endstyle %} 
+<div class="cod-btn-main">
+    <div class="cod-btn">
+        <button> {{ block.settings.btn_text }} 
+            {% if block.settings.btn_text_subtitle != blank %}
+            <p> {{ block.settings.btn_text_subtitle }} </p>
+            {% endif %}
+        </button>
+    </div>
+</div>
+
+
+{% schema %}
+{
+    "name": "COD Button",
+    "target":"section",
+    "settings": [
+        {
+            "type": "text",
+            "id":"btn_text",
+            "label": "Button Text",
+            "default": "Buy With Cash on Delievery"
+        },
+        {
+  "type": "select",
+  "id": "btn_svg_icon",
+  "label": "Button Icon",
+  "options": [
+    {
+      "value": "cross",
+      "label": "Cross"
+    },
+    {
+      "value": "middle",
+      "label": "Middle"
+    },
+    {
+      "value": "bottom",
+      "label": "Bottom"
+    }
+  ],
+  "default": "middle"
+}
+
+        {
+            "type": "text",
+            "id":"btn_text_subtitle",
+            "label": "Button SubTitle"
+        },
+        {
+  "type": "range",
+  "id": "btn_text_subtitle_size",
+  "min": 10,
+  "max": 30,
+  "step": 1,
+  "unit": "px",
+  "label": "Subtitle Text Size",
+  "default": 12
+},
+        {
+  "type": "range",
+  "id": "btn_text_subtitle_space",
+  "min": 0,
+  "max": 20,
+  "step": 1,
+  "unit": "px",
+  "label": "Space Between Button Text and Subtitle",
+  "default": 0
+},
+        {
+            "type":"color",
+            "id":"btn_bg",
+            "label":"Background Color",
+            "default":"#000"
+        },
+        {
+            "type":"color",
+            "id":"btn_text_color",
+            "label":"Button Text Color",
+            "default":"#fff"
+        },
+
+        {
+  "type": "range",
+  "id": "btn_text_size",
+  "min": 15,
+  "max": 30,
+  "step": 1,
+  "unit": "px",
+  "label": "Button Text Size",
+  "default": 17
+},
+{
+  "type": "checkbox",
+  "id": "btn_text_bold",
+  "label": "Button Text Bold",
+  "default": false
+},
+
+        {
+  "type": "range",
+  "id": "btn_height",
+  "min": 5,
+  "max": 15,
+  "step": 1,
+  "unit": "px",
+  "label": "Button Height",
+  "default": 5
+},
+{
+  "type": "range",
+  "id": "btn_width",
+  "min": 15,
+  "max": 40,
+  "step": 1,
+  "unit": "px",
+  "label": "Button Height",
+  "default": 15
+},
+{
+  "type": "range",
+  "id": "btn_border",
+  "min": 0,
+  "max": 5,
+  "step": 1,
+  "unit": "px",
+  "label": "Button Border",
+  "default": 0
+},
+{
+    "type":"color",
+    "id":"btn_border_color",
+    "label":"Border Color"
+},
+{
+  "type": "range",
+  "id": "btn_radius",
+  "min": 0,
+  "max": 10,
+  "step": 1,
+  "unit": "px",
+  "label": "Button Radius",
+  "default": 0
+}
+
+        ]
+}
+{% endschema %}

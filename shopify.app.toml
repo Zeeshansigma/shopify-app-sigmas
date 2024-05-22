@@ -3,7 +3,7 @@
 client_id = "cab56b1b497739251794c457f5d2914f"
 name = "sigmas"
 handle = "sigmas"
-application_url = "https://drama-considerations-ensures-gm.trycloudflare.com"
+application_url = "https://ave-optimum-thomas-veterans.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://drama-considerations-ensures-gm.trycloudflare.com/auth/callback",
-  "https://drama-considerations-ensures-gm.trycloudflare.com/auth/shopify/callback",
-  "https://drama-considerations-ensures-gm.trycloudflare.com/api/auth/callback"
+  "https://ave-optimum-thomas-veterans.trycloudflare.com/auth/callback",
+  "https://ave-optimum-thomas-veterans.trycloudflare.com/auth/shopify/callback",
+  "https://ave-optimum-thomas-veterans.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
