@@ -14,6 +14,7 @@
 .cross svg{
     width:30px;
     height:30px;
+    cursor:pointer;
 }
 .delievery_and_cross {
     display: flex;
@@ -25,6 +26,122 @@
     max-width: 500px;
     margin: 20px auto;
     background-color: white;
+    padding: 20px;
+    border-radius:9px;
+}
+.shipping_method h5 {
+    font-size: 17.64px;
+    font-weight: 600;
+}
+.image_title a {
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+    
+}
+.cod_product_price p {
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+}
+.shipping_and_total_price {
+    background-color: rgb(235, 235, 235);
+    padding: 8px 12px 5px;
+    border-radius: 6px;
+}
+.cod_subtotal,
+.cod_shipping,
+.cod_total_cost {
+    display: flex;
+    justify-content: space-between;
+}
+.cod_subtotal p,
+.cod_shipping p,
+.cod_total_cost p{
+margin:0;
+font-size:15.96px;
+color:#000;
+}
+.bold{
+    font-weight:600;
+}
+.cod_total_cost {
+    border-top: 1px solid #c7c7c7;
+    margin-top: 6px;
+    padding-top: 5px;
+}
+.total_price_cod{
+    font-size: 19.32px !important;
+}
+.cod_sign{
+    width: 18px;
+    border: 1px solid silver;
+    height: 18px;
+    display: block !important;
+    border-radius: 50%;
+    position: relative;
+}
+.cod_sign::before{
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: #000;
+    position: absolute;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+}
+.free_shipping_bar {
+    border: 1px solid silver;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    min-height: 47px;
+    align-items: center;
+    padding: 0px 15px;
+}
+.cod_right {
+    display: flex;
+    align-items: center;
+    column-gap: 18px;
+}
+.cod_left p {
+    margin: 0;
+    color:#000;
+}
+.cod_free_shipping p {
+    margin: 0;
+    color:#000;
+}
+.value_cod input {
+    background-repeat: no-repeat;
+    width: 100%;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='47' height='51' viewBox='0 0 47 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M44.82 0H0V50.86H44.82V0Z' fill='%23E1E1E1'/%3e%3cpath d='M46.0298 0H44.8008V50.86H46.0298V0Z' fill='%23C0C0C0'/%3e%3cpath d='M23.0004 25.4017C25.1114 25.4017 26.8204 23.6917 26.8204 21.5817C26.8204 19.4717 25.1104 17.7617 23.0004 17.7617C20.8904 17.7617 19.1804 19.4717 19.1804 21.5817C19.1804 23.6917 20.8904 25.4017 23.0004 25.4017ZM23.0004 27.3117C20.4504 27.3117 15.3594 28.5917 15.3594 31.1317V32.0868C15.3594 32.6121 15.7892 33.0419 16.3145 33.0419H29.6845C30.2098 33.0419 30.6396 32.6121 30.6396 32.0868V31.1317C30.6396 28.5907 25.5486 27.3117 22.9986 27.3117H23.0004Z' fill='%231A1A1A'/%3e%3c/svg%3e");
+    background-position: left;
+    padding-left: 60px !important;
+    padding: 14px 0;
+    border: 1px solid #c0c0c0;
+    border-radius: 6px;
+}
+.value_cod {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin:5px 0;
+}
+.value_cod label {
+    width: 100%;
+    max-width: 110px;
+    font-weight: 600;
+    color: black;
+}
+.phone_number_cod{
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg version='1.1' viewBox='0 0 46.05 50.86' xmlns='http://www.w3.org/2000/svg'%3E%3Cg transform='translate(-171.3 -284.5)'%3E%3Crect x='171.3' y='284.5' width='44.82' height='50.86' ry='0' fill='%23e1e1e1'/%3E%3Crect x='216.1' y='284.5' width='1.229' height='50.86' fill='%23c0c0c0'/%3E%3Cpath d='m200.6 312.8-2.233-0.2549c-0.5362-0.0615-1.064 0.123-1.441 0.501l-1.617 1.617c-2.487-1.266-4.527-3.296-5.792-5.792l1.626-1.626c0.378-0.378 0.5625-0.9053 0.501-1.441l-0.2549-2.215c-0.1055-0.8878-0.8526-1.556-1.749-1.556h-1.521c-0.9932 0-1.819 0.8262-1.758 1.819 0.4658 7.506 6.469 13.5 13.97 13.97 0.9932 0.0615 1.819-0.7647 1.819-1.758v-1.521c9e-3 -0.8877-0.6592-1.635-1.547-1.74z' fill='%231a1a1a'/%3E%3C/g%3E%3C/svg%3E") !important;
+    background-size: 46px;
+}
+.email_cod{
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg version='1.1' viewBox='0 0 46.05 50.86' xmlns='http://www.w3.org/2000/svg'%3E%3Cg transform='translate(-171.3 -284.5)'%3E%3Crect x='171.3' y='284.5' width='44.82' height='50.86' ry='0' fill='%23e1e1e1'/%3E%3Cpath d='m194.9 301c-5.455-0.3853-9.96 4.12-9.575 9.574 0.3227 4.738 4.46 8.312 9.207 8.312h3.305c0.4926 0 0.8956-0.403 0.8956-0.8956 0-0.4926-0.4031-0.8956-0.8956-0.8956h-3.287c-3.341 0-6.404-2.167-7.237-5.401-1.335-5.195 3.502-10.04 8.697-8.697 3.242 0.824 5.41 3.887 5.41 7.228v0.9852c0 0.7076-0.6359 1.406-1.343 1.406s-1.343-0.6986-1.343-1.406v-1.12c0-2.248-1.594-4.272-3.815-4.586-3.045-0.4389-5.616 2.194-5.069 5.257 0.3045 1.711 1.639 3.126 3.332 3.529 1.648 0.3853 3.215-0.1434 4.245-1.191 0.7971 1.093 2.391 1.666 3.851 1.084 1.2-0.4747 1.935-1.702 1.935-2.991v-0.9763c0-4.756-3.574-8.894-8.312-9.216zm-0.6449 11.62c-1.487 0-2.687-1.2-2.687-2.687 0-1.487 1.2-2.687 2.687-2.687s2.687 1.2 2.687 2.687c0 1.487-1.2 2.687-2.687 2.687z' fill='%231a1a1a'/%3E%3Crect x='216.1' y='284.5' width='1.229' height='50.86' fill='%23c0c0c0'/%3E%3C/g%3E%3C/svg%3E") !important;
+    background-size: 46px;
 }
 {% endstyle %}
 <div class="cod-form-layer-main">
@@ -41,10 +158,61 @@
     <div class="image_title">
         <img src=" {{ product.featured_image |  img_url: 'master' }} " alt="">
         <a href=" {{ product.url }} "> {{ product.title }} </a>
+        <div class="quantity_cod_badge">
+            <p>1 </p>
+        </div>
     </div>
     <div class="cod_product_price">
-        <p> {{ product.price |  money }} </p>
+        <p class="product_price_cod"> {{ product.price |  money }} </p>
     </div>
+</div>
+
+<div class="shipping_and_total_price">
+    <div class="cod_subtotal">
+<p> Subtotal </p>
+<p class="product_price_cod bold"> {{ product.price |  money }} </p>
+    </div>
+    <div class="cod_shipping">
+<p> Shipping </p>
+<p class="bold"> Free </p>
+    </div>
+    <div class="cod_total_cost">
+        <p class="total_cod bold"> Total </p>
+        <p class="bold total_price_cod product_price_cod"> {{ product.price |  money }} </p>
+    </div>
+</div>
+
+<div class="shipping_method">
+    <h5> Shipping method </h5>
+
+    <div class="free_shipping_bar">
+<div class="cod_right">
+    <div class="cod_sign">
+
+    </div>
+<div class="cod_free_shipping">
+    <p>Free shipping</p>
+</div>
+</div>
+<div class="cod_left">
+    <p class="bold"> Free </p>
+</div>
+    </div>
+</div>
+
+{% comment %} input user data  {% endcomment %}
+<h3> Enter your shipping address </h3>
+<div class="value_cod">
+    <label for=""> First name* </label>
+    <input type="text" placeholder="First Name" required>
+</div>
+<div class="value_cod">
+    <label for=""> Phone number* </label>
+    <input class="phone_number_cod" type="text" placeholder="Phone number" required>
+</div>
+<div class="value_cod">
+    <label for=""> Email </label>
+    <input class="email_cod" type="text" placeholder="Email" required>
 </div>
 </div>
 </div>
