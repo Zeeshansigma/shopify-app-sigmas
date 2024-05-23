@@ -47,3 +47,15 @@
     padding: 6px 0;
     margin: 16px 0;
 }
+.cod_complete_btn button{
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+.cod_complete_btn button p{
+    color: #fff;
+}
