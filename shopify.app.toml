@@ -3,7 +3,7 @@
 client_id = "cab56b1b497739251794c457f5d2914f"
 name = "sigmas"
 handle = "sigmas"
-application_url = "https://became-algorithm-warner-bowl.trycloudflare.com"
+application_url = "https://proceed-longitude-minus-transaction.trycloudflare.com"
 embedded = true
 
 [build]
@@ -13,13 +13,13 @@ include_config_on_deploy = true
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "read_order_edits,read_orders,write_orders"
+scopes = "read_order_edits,read_orders,read_products,write_orders"
 
 [auth]
 redirect_urls = [
-  "https://became-algorithm-warner-bowl.trycloudflare.com/auth/callback",
-  "https://became-algorithm-warner-bowl.trycloudflare.com/auth/shopify/callback",
-  "https://became-algorithm-warner-bowl.trycloudflare.com/api/auth/callback"
+  "https://proceed-longitude-minus-transaction.trycloudflare.com/auth/callback",
+  "https://proceed-longitude-minus-transaction.trycloudflare.com/auth/shopify/callback",
+  "https://proceed-longitude-minus-transaction.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

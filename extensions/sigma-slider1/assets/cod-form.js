@@ -51,4 +51,26 @@ cod_cross.addEventListener("click", function() {
     newDiv.style.setProperty('display', 'none', 'important');
 });
 
+let product_id = document.querySelector(".btn_product_id");
+const productId = product_id.getAttribute('data-product-id');
+console.log("productId", productId);
 
+
+// app js
+
+async function fetchProductCount() {
+    try {
+        const response = await fetch('/api/products/count');
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const countData = await response.json();
+        document.getElementById('output').innerText = `Product Count: ${countData.count}`;
+    } catch (error) {
+        console.log('There was a problem with the fetch operation:', error);
+        document.getElementById('output').innerText = 'Error fetching product count';
+    }
+}
+
+// Add event listener to the button
+document.getElementById('fetchDataBtn').addEventListener('click', fetchProductCount);

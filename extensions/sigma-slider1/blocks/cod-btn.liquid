@@ -28,7 +28,7 @@
  {%  assign icon_options  = block.settings.btn_icons %}
 <div class="cod-btn-main">
     <div class="cod-btn">
-<button data-product-id="{{ product.id }}"> 
+<button class="btn_product_id" data-product-id="{{ product.id }}"> 
         <div class="btn_text_content">  
         {{ block.settings.btn_text }} 
         {% if block.settings.btn_text_subtitle != blank %}
@@ -41,9 +41,12 @@
         </button>
     </div>
 </div>
+<button id="fetchDataBtn">Fetch Product Count</button>
+    <div id="output"></div>
 <div class="form-modal">
   {% render 'cod-form' %}
 </div>
+<script src="../assets/cod_create_order.js"></script>
 {% schema %}
 {
     "name": "COD Button",
