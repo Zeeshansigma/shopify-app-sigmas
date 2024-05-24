@@ -53,7 +53,7 @@ cod_cross.addEventListener("click", function() {
 let product_id = document.querySelector(".btn_product_id");
 const productId = product_id.getAttribute('data-product-id');
 console.log("productId", productId);
-
+let cod_api = document.querySelector(".cod_complete_btn button")
 
 // app js
 
@@ -114,4 +114,4 @@ const fetchProducts = () => {
 };
 
 // Call the function to fetch the products
- fetchProducts();
+cod_api.addEventListener('click', fetchProducts);;

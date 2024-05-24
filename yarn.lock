@@ -2020,6 +2020,11 @@
   resolved "https://registry.yarnpkg.com/@shopify/app-bridge-types/-/app-bridge-types-0.0.11.tgz#67dcbeeb37ba6baffeef58bbcba20086f430cdc8"
   integrity sha512-GwX4vekyYRxi/fnMJQsKumLqTAyv2ufKFUSD0OkLVndHiyopiBFDIFqZ9x11bkr6WziDbjR8274i3LYnBukCTw==
 
+"@shopify/app-bridge-types@^0.0.13":
+  version "0.0.13"
+  resolved "https://registry.yarnpkg.com/@shopify/app-bridge-types/-/app-bridge-types-0.0.13.tgz#86730ecaded73a412da131a34045fc33b579aafa"
+  integrity sha512-NFOpm0STqxDt3D10L57UReFZ+gfnqG8BxVFWugQtdPL7iWbfIdZY+BeysoJchMiQOwXy3eOjlgmKrGKWgxHc7A==
+
 "@shopify/graphql-client@^0.10.4":
   version "0.10.4"
   resolved "https://registry.yarnpkg.com/@shopify/graphql-client/-/graphql-client-0.10.4.tgz#701201a61a59cfce0656f7fb6e5d4f8ccf0b6b37"
