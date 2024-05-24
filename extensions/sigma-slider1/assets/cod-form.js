@@ -1,6 +1,5 @@
 // theme quantity 
 let theme_quantity = document.querySelector("quantity-input input");
-console.log("theme_quantity", theme_quantity);
 const priceElements = document.querySelectorAll('.product_price_cod');
 let badge = document.querySelector(".quantity_cod_badge p");
 console.log( "badge", badge.textContent)
@@ -58,19 +57,61 @@ console.log("productId", productId);
 
 // app js
 
-async function fetchProductCount() {
+const fetchProducts = () => {
+    let store_name = Shopify.shop;
+    console.log("store_name", store_name);
+    
     try {
-        const response = await fetch('/api/products/count');
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        const countData = await response.json();
-        document.getElementById('output').innerText = `Product Count: ${countData.count}`;
-    } catch (error) {
-        console.log('There was a problem with the fetch operation:', error);
-        document.getElementById('output').innerText = 'Error fetching product count';
-    }
-}
+        const res = fetch(`https://${store_name}/admin/api/2024-04/graphql.json`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept':'application/json'
+            },
+            body: JSON.stringify({
+                query: `
+                    query products(first: 250,) {
+                            nodes {
+                                id
+                                title
+                                status
+                                vendor
+                                featuredImage {
+                                    id
+                                }
+                                variants(first: 10) {
+                                    edges {
+                                        node {
+                                            id
+                                            price
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                `,
+            }),
+        });
 
-// Add event listener to the button
-document.getElementById('fetchDataBtn').addEventListener('click', fetchProductCount);
+        // if (!res.ok) {
+        //     console.log(res);
+        //     return;
+        // }
+
+       
+        console.log(res);
+
+        // if (responseData.errors) {
+        //     console.error('GraphQL Errors:', responseData.errors);
+        // } else {
+        //     const { data } = responseData;
+        //     console.log(data);
+        // }
+    
+    } catch (error) {
+        console.error('Fetch error:', error);
+    }
+};
+
+// Call the function to fetch the products
+ fetchProducts();
