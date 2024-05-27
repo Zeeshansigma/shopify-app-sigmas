@@ -55,6 +55,24 @@ const productId = product_id.getAttribute('data-product-id');
 console.log("productId", productId);
 let cod_api = document.querySelector(".cod_complete_btn button")
 
+//mbl sticky add to cart
+//mbl sticky add to cart
+let newDiv_btn = document.querySelector('.new-div_mobile');
+let cod_btn_main = document.querySelector('.btn_product_id');
+
+cod_btn_main.addEventListener("click", function(){
+  console.log("clicked");
+});
+document.body.appendChild(newDiv_btn);
+console.log("append");
+if (screen.width <= 768 && cod_btn_main) {
+  newDiv_btn.style.display = "block"; 
+  newDiv_btn.appendChild(cod_btn_main); 
+}
+
+
+//mbl sticky add to cart end
+
 // app js
 
 const fetchProducts = () => {

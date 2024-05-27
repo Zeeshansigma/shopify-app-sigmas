@@ -47,3 +47,15 @@
     padding: 6px 0;
     margin: 16px 0;
 }
+
+
+
+
+@media screen and (max-width:768px) {
+    .cod-form-main{
+        max-height: 80vh;
+        overflow-y: scroll;
+    }
+}
+
+

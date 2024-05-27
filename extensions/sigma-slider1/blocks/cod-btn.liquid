@@ -1,5 +1,10 @@
-  {%  style  %} 
-.cod-btn button{
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+{%  style  %} 
+.cod-btn button,
+.new-div_mobile button{
     background-color: {{ block.settings.btn_bg }};
     padding:{{ block.settings.btn_height }}px {{ block.settings.btn_width }}px;
     border:{{ block.settings.btn_border }}px solid {{ block.settings.btn_border_color }};
@@ -10,25 +15,36 @@
         {% endif %}
         cursor:pointer;
 }
-.cod-btn button .btn_text_content{
+.cod-btn button .btn_text_content,
+.new-div_mobile button .btn_text_content{
   color:{{ block.settings.btn_text_color }};
   text-decoration: none;
 }
 {% if block.settings.btn_text_subtitle != blank %}
-.cod-btn button p{
+.cod-btn button p, 
+.new-div_mobile button p{
     margin:0;
     margin-top: {{ block.settings.btn_text_subtitle_space }}px;
     font-size: {{ block.settings.btn_text_subtitle_size }}px;
     color:{{ block.settings.btn_text_color }};
 }
-
 {% endif %}
-
+@media screen and (min-width:768px){
+  .new-div_mobile {
+    display:none;
+  }
+}
+.new-div_mobile button{
+  position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 999999999;
+}
  {% endstyle %} 
  {%  assign icon_options  = block.settings.btn_icons %}
 <div class="cod-btn-main">
     <div class="cod-btn">
-<button class="btn_product_id" data-product-id="{{ product.id }}"> 
+<button class="btn_product_id animate__animated {{ block.settings.Button_animation }} animate__infinite animate__delay-5s" data-product-id="{{ product.id }}"> 
         <div class="btn_text_content">  
         {{ block.settings.btn_text }} 
         {% if block.settings.btn_text_subtitle != blank %}
@@ -41,7 +57,11 @@
         </button>
     </div>
 </div>
-
+{% if block.settings.sticky_on_mobile == 'true' %}
+  <div class="new-div_mobile condition_run"></div>
+{% else block.settings.sticky_on_mobile == 'false' %}
+  <div class="new-div_mobile"></div>
+{% endif %}
 <div class="form-modal">
   {% render 'cod-form' %}
 </div>
@@ -60,12 +80,62 @@
         },
         {
   "type": "select",
+  "id": "Button_animation",
+  "label": "Button animation",
+  "options": [
+    {
+      "value": "No_Animate",
+      "label": "None"
+    },
+    {
+      "value": "animate__bounce",
+      "label": "Animate Bounce"
+    },
+    {
+      "value": "animate__flash",
+      "label": "Animate Flash"
+    },
+    {
+      "value": "animate__pulse",
+      "label": "Animate Pulse"
+    },
+    {
+      "value": "animate__rubberBand",
+      "label": "Animate RubberBand"
+    },
+    {
+      "value": "animate__shakeX",
+      "label": "Animate ShakeX"
+    },
+    {
+      "value": "animate__shakeY",
+      "label": "Animate ShakeY"
+    },
+    {
+      "value": "animate__tada",
+      "label": "Animate Tada"
+    },
+    {
+      "value": "animate__wobble",
+      "label": "Animate wobble"
+    }
+  ],
+  "default": "No_Animate"
+},
+
+        {
+            "type": "text",
+            "id":"btn_text_subtitle",
+            "label": "Button SubTitle"
+        },
+        {
+  "type": "select",
   "id": "btn_icons",
   "label": "Button Icon",
   "options": [
     {
-      "value": "cart",
-      "label": "Cart"
+      "value": "xs",
+      "label": "X-small"
     },
     {
       "value": "s",
@@ -91,11 +161,6 @@
   "default": "m"
 },
 
-        {
-            "type": "text",
-            "id":"btn_text_subtitle",
-            "label": "Button SubTitle"
-        },
         {
   "type": "range",
   "id": "btn_text_subtitle_size",
@@ -191,6 +256,13 @@
   "label": "Button Radius",
   "default": 0
 },
+{
+  "type": "checkbox",
+  "id": "sticky_on_mobile",
+  "label": "Sticky ON Mobile",
+  "default": false
+},
+
 {
   "type":"color",
   "id": "form_bg",

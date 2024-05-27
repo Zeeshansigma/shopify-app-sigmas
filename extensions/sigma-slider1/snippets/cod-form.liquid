@@ -155,6 +155,12 @@ color: {{ block.settings.form_content_color  }};
 .cod_complete_btn button p{
     color: {{ block.settings.form_btn_color_text }};
 }
+.value_cod select {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+}
 {% endstyle %}
 <div class="cod-form-layer-main">
 <div class="cod-form-main">
@@ -226,6 +232,13 @@ color: {{ block.settings.form_content_color  }};
     <label for=""> Email </label>
     <input class="email_cod" type="text" placeholder="Email" required>
 </div>
+<div class="value_cod">
+    <label for=""> State* </label>
+    <select name="country">
+  {{ all_country_option_tags }}
+</select>
+</div>
+
 
 <div class="cod_complete_btn">
     <button>  
