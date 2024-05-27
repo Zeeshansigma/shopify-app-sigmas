@@ -3,7 +3,7 @@
 client_id = "cab56b1b497739251794c457f5d2914f"
 name = "sigmas"
 handle = "sigmas"
-application_url = "https://brick-deadly-landscape-philippines.trycloudflare.com"
+application_url = "https://combining-won-genetics-possibilities.trycloudflare.com"
 embedded = true
 
 [build]
@@ -21,9 +21,9 @@ scopes = "read_order_edits,read_orders,read_products,write_orders"
 
 [auth]
 redirect_urls = [
-  "https://brick-deadly-landscape-philippines.trycloudflare.com/auth/callback",
-  "https://brick-deadly-landscape-philippines.trycloudflare.com/auth/shopify/callback",
-  "https://brick-deadly-landscape-philippines.trycloudflare.com/api/auth/callback"
+  "https://combining-won-genetics-possibilities.trycloudflare.com/auth/callback",
+  "https://combining-won-genetics-possibilities.trycloudflare.com/auth/shopify/callback",
+  "https://combining-won-genetics-possibilities.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
