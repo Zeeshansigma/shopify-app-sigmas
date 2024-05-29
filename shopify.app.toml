@@ -3,7 +3,7 @@
 client_id = "cab56b1b497739251794c457f5d2914f"
 name = "sigmas"
 handle = "sigmas"
-application_url = "https://judy-stopped-posters-investigations.trycloudflare.com"
+application_url = "https://taiwan-elections-cartridges-pools.trycloudflare.com"
 embedded = true
 
 [build]
@@ -21,9 +21,9 @@ scopes = "read_order_edits,read_orders,read_products,write_orders,write_products
 
 [auth]
 redirect_urls = [
-  "https://judy-stopped-posters-investigations.trycloudflare.com/auth/callback",
-  "https://judy-stopped-posters-investigations.trycloudflare.com/auth/shopify/callback",
-  "https://judy-stopped-posters-investigations.trycloudflare.com/api/auth/callback"
+  "https://taiwan-elections-cartridges-pools.trycloudflare.com/auth/callback",
+  "https://taiwan-elections-cartridges-pools.trycloudflare.com/auth/shopify/callback",
+  "https://taiwan-elections-cartridges-pools.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

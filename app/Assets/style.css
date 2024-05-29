@@ -1,0 +1,12 @@
+.form_cod_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.form_cod_title span {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+.cod_inner_content {
+    display: none;
+}

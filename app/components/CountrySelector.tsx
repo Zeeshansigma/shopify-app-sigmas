@@ -4,10 +4,13 @@ import ReactFlagsSelect from "react-flags-select";
 const CountrySelector = () => {
   const [selected, setSelected] = useState("");
 
+  
+
 return(
-  <div>
-    <h2> country_selector</h2>
-  </div>
+  <ReactFlagsSelect
+  selected={selected}
+  onSelect={(code) => setSelected(code)}
+/>
 );
 };
 
